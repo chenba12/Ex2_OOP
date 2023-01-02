@@ -93,23 +93,23 @@ public class Ex2_1 {
     }
 
     public static void main(String[] args) {
-        String[] filenames=createTextFiles(100,1,500);
+        String[] filenames=createTextFiles(1000,5,99999);
         Instant before = Instant.now();
-        System.out.println(getNumOfLines(filenames));
+        int lines=getNumOfLines(filenames);
         Instant after = Instant.now();
         long delta = Duration.between(before, after).toMillis(); // .toWhatsoever()
-        System.out.println("time without threads is: "+delta+" milliseconds");
+        System.out.println("time without threads is: "+delta+" milliseconds and read "+lines+" lines");
 
         before = Instant.now();
-        System.out.println(getNumOfLinesThreads(filenames));
+        lines=getNumOfLinesThreads(filenames);
         after = Instant.now();
         delta = Duration.between(before, after).toMillis(); // .toWhatsoever()
-        System.out.println("time with threads is: "+delta+" milliseconds");
+        System.out.println("time with threads is: "+delta+" milliseconds and read "+lines+" lines");
 
         before = Instant.now();
-        System.out.println(getNumOfLinesThreadPool(filenames));
+        lines=getNumOfLinesThreadPool(filenames);
         after = Instant.now();
         delta = Duration.between(before, after).toMillis(); // .toWhatsoever()
-        System.out.println("time with threadPool is: "+delta+" milliseconds");
+        System.out.println("time with threadPool is: "+delta+" milliseconds and read "+lines+" lines");
     }
 }
