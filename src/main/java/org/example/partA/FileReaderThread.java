@@ -3,8 +3,6 @@ package org.example.partA;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class FileReaderThread extends Thread {
