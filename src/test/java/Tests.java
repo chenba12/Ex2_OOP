@@ -1,5 +1,6 @@
-import org.example.CustomExecutor;
-import org.example.TaskType;
+import org.example.PartB.CustomExecutor;
+import org.example.PartB.TaskType;
+import org.example.PartB.Task;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
@@ -14,7 +15,7 @@ public class Tests {
     @Test
     public void partialTest() {
         CustomExecutor customExecutor = new CustomExecutor();
-        var task = Task.createTask(() -> {
+        Callable<Integer> task = Task.createTask(() -> {
             int sum = 0;
             for (int i = 1; i <= 10; i++) {
                 sum += i;
@@ -29,17 +30,12 @@ public class Tests {
             throw new RuntimeException(e);
         }
         logger.info(() -> "Sum of 1 through 10 = " + sum);
-        Callable<Double> callable1 = () -> {
-            return 1000 * Math.pow(1.02, 5);
-        };
         Callable<String> callable2 = () -> {
             StringBuilder sb = new StringBuilder("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
             return sb.reverse().toString();
         };
 
-        var priceTask = customExecutor.submit(() -> {
-            return 1000 * Math.pow(1.02, 5);
-        }, TaskType.COMPUTATIONAL);
+        var priceTask = customExecutor.submit(() -> 1000 * Math.pow(1.02, 5), TaskType.COMPUTATIONAL);
         var reverseTask = customExecutor.submit(callable2, TaskType.IO);
         final Double totalPrice;
         final String reversed;
@@ -50,7 +46,7 @@ public class Tests {
             throw new RuntimeException(e);
         }
         logger.info(() -> "Reversed String = " + reversed);
-        logger.info(() -> String.valueOf("Total Price = " + totalPrice));
+        logger.info(() -> "Total Price = " + totalPrice);
         logger.info(() -> "Current maximum priority = " +
                 customExecutor.getCurrentMax());
         customExecutor.gracefullyTerminate();

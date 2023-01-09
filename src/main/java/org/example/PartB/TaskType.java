@@ -1,4 +1,4 @@
-package org.example;
+package org.example.PartB;
 
 public enum TaskType {
     COMPUTATIONAL(1) {

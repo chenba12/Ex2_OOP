@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.example.PartB</OriginalElement>
+  <nodes>
+    <node x="420.4673524363426" y="-22.048614282679182">org.example.PartB.TaskType</node>
+    <node x="-116.14020390839335" y="294.3790716622716">org.example.PartB.Task</node>
+    <node x="405.83704004209886" y="360.1330201381097">org.example.PartB.CustomExecutor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.example.PartB.Task" target="org.example.PartB.TaskType" relationship="TO_ONE">
+      <point x="0.0" y="-286.0" />
+      <point x="96.85979609160665" y="133.95138571732082" />
+      <point x="-148.5" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7494270435446906" showDependencies="true" x="369.0" y="621.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
