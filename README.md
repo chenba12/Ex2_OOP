@@ -30,7 +30,7 @@ but upon some research we discovered that sometimes the thread-pool is faster an
 # **Part B:**
 We were asked to build a thread-pool that consider the task priority.
 
-class diagram: [PartB.uml](PartB.uml)
+**class diagram** : [PartB.uml](PartB.uml)
 
 We created a Task class that is the Task we want to execute asynchronously
 and each task have a priority to be executed.
