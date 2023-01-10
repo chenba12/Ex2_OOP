@@ -6,7 +6,7 @@ that reads the amount of lines in a file in 3 ways
 2) Using basic threads
 3) Using Thread pool
 
-**class diagram** : [partA.uml](partA.uml)
+**class diagram** : ![partA](https://user-images.githubusercontent.com/46110492/211606286-e7b6bff3-df71-495d-9e51-8a6042cca392.png)
 
 We created 1000 files and passed seed as 5 and the bound to 99999.
 
@@ -30,7 +30,7 @@ but upon some research we discovered that sometimes the thread-pool is faster an
 # **Part B:**
 We were asked to build a thread-pool that consider the task priority.
 
-**class diagram** : [PartB.uml](PartB.uml)
+**class diagram** : ![PartB](https://user-images.githubusercontent.com/46110492/211606414-e8444466-66ee-4552-9037-e263fffc128b.png)
 
 We created a Task class that is the Task we want to execute asynchronously
 and each task have a priority to be executed.
